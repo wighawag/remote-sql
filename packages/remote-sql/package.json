@@ -1,24 +1,23 @@
 {
-    "name": "remote-sql",
-    "version": "0.0.0",
-    "types": "./dist/index.d.ts",
-    "exports": {
-      ".": {
-        "require": {
-          "types": "./dist/index.d.ts"
-        },
-        "import": {
-          "types": "./dist/index.d.ts"
-        }
+  "name": "remote-sql",
+  "version": "0.0.0",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/index.d.ts"
+      },
+      "import": {
+        "types": "./dist/index.d.ts"
       }
-    },
-    "dependencies": {},
-    "devDependencies": {
-      "pkgroll": "^2.0.2"
-    },
-    "scripts": {
-      "build": "pkgroll",
-      "dev": "pkgroll --watch"
     }
+  },
+  "devDependencies": {
+    "pkgroll": "^2.0.2",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "pkgroll",
+    "dev": "pkgroll --watch"
   }
-  
+}
