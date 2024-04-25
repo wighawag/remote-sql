@@ -1,0 +1,33 @@
+{
+  "name": "remote-sql-monorepo",
+  "version": "0.0.0",
+  "description": "an interface to remote sql who support tx as batch only",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "ldenv": "^0.3.7",
+    "set-defaults": "^0.0.2",
+    "syncpack": "^11.2.1"
+  },
+  "scripts": {
+    "prepare": "set-defaults .vscode",
+    "preinstall": "npx only-allow pnpm",
+    "---------------------- INSTALL ----------------------": "",
+    "sync-deps": "syncpack fix-mismatches && pnpm -r format:fix",
+    "---------------------- FORMAT ----------------------": "",
+    "format": "prettier --write . && pnpm -r format",
+    "format:check": "prettier --check . && pnpm -r format:check",
+    "---------------------- TEST ----------------------": "",
+    "test": "pnpm -r test",
+    "---------------------- DEV ----------------------": "",
+    "remote-sql:dev": "pnpm --filter remote-sql dev",
+    "remote-sql-d1:dev": "pnpm --filter remote-sql-d1 dev",
+    "remote-sql-libsql:dev": "pnpm --filter remote-sql-libsql dev",
+    "---------------------- BUILD ----------------------": "",
+    "build": "ldenv pnpm run -r build",
+    "---------------------- RUN FULL LOCAL SETUP ----------------------": "",
+    "stop": "zellij kill-session $npm_package_name",
+    "start": "zellij --layout zellij.kdl a $npm_package_name || zellij --layout zellij.kdl -s $npm_package_name"
+  }
+}
