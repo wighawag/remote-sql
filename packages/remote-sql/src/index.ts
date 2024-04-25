@@ -1,6 +1,6 @@
 export type SQLStatement = {sql: string; args: any[]} | string;
 
-export type SQLResult<T = any> = {rows: T[]};
+export type SQLResult<T = any> = {results: T[]};
 
 export interface SQLPreparedStatement {
 	bind(...values: any[]): SQLPreparedStatement;

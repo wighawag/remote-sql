@@ -7,9 +7,7 @@ export class D1SQLPreparedStatement implements SQLPreparedStatement {
 	}
 	async all<T = any>(): Promise<SQLResult<T>> {
 		const response = await this.statement.all();
-		return {
-			rows: response.results,
-		} as SQLResult<T>;
+		return response as SQLResult<T>;
 	}
 }
 
@@ -36,6 +34,6 @@ export class RemoteD1 implements RemoteSQL {
 				return p.statement;
 			}),
 		);
-		return response.map((res) => ({ rows: res.results })) as SQLResult<T>[];
+		return response as SQLResult<T>[];
 	}
 }
