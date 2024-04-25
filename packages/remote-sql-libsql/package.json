@@ -1,6 +1,6 @@
 {
   "name": "remote-sql-libsql",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publishConfig": {
     "access": "public"
   },
@@ -19,6 +19,10 @@
       }
     }
   },
+  "files": [
+    "./dist",
+    "./src"
+  ],
   "dependencies": {
     "remote-sql": "workspace:*"
   },
