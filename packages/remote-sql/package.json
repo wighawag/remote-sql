@@ -1,6 +1,9 @@
 {
   "name": "remote-sql",
   "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
