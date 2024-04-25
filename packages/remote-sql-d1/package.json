@@ -20,8 +20,12 @@
     "remote-sql": "workspace:*"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230814.0",
     "pkgroll": "^2.0.2",
     "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "@cloudflare/workers-types": "^4.20230814.0"
   },
   "scripts": {
     "build": "pkgroll",
