@@ -1,4 +1,4 @@
-import { RemoteSQL, SQLPreparedStatement, SQLResult } from 'remote-sql';
+import {RemoteSQL, SQLPreparedStatement, SQLResult} from 'remote-sql';
 
 export class D1SQLPreparedStatement implements SQLPreparedStatement {
 	constructor(public statement: D1PreparedStatement) {}
@@ -32,7 +32,7 @@ export class RemoteD1 implements RemoteSQL {
 			list.map((v) => {
 				const p = v as D1SQLPreparedStatement;
 				return p.statement;
-			}),
+			})
 		);
 		return response as SQLResult<T>[];
 	}
