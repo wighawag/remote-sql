@@ -1,5 +1,13 @@
 # remote-sql-d1
 
+## 0.0.4
+
+### Patch Changes
+
+- format + fix libsql adapter
+- Updated dependencies
+  - remote-sql@0.0.4
+
 ## 0.0.3
 
 ### Patch Changes
