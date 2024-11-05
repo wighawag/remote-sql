@@ -1,5 +1,13 @@
 # remote-sql-libsql
 
+## 0.0.6
+
+### Patch Changes
+
+- update latest
+- Updated dependencies
+  - remote-sql@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes
